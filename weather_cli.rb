@@ -1,20 +1,20 @@
 class WeatherCli < Formula
   desc "Fast CLI tool to fetch and display weather information"
   homepage "https://github.com/magichrist/weather_cli"
-  version "0.2.5"
+  version "0.2.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/magichrist/weather_cli/releases/download/v#{version}/weather_cli-macos-aarch64"
-      sha256 "94c609d903c811878ec2bf2424e96deab248afb848e4dedb25145b36132379c6"
+      url "https://github.com/magichrist/weather_cli/releases/download/v#{version}/weather_cli-macos-aarch64.gz"
+      sha256 "b0f831e8f589397a83f52b62dc4fcc5cfa3ff55a44ccbf4e6d4f3299e670ae99"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/magichrist/weather_cli/releases/download/v#{version}/weather_cli-linux-x86_64"
-      sha256 "ad491b502044f01a3c66b243f75ab054e01b0ff9b092e4e2906505c88c0ae1cc"
+      url "https://github.com/magichrist/weather_cli/releases/download/v#{version}/weather_cli-linux-x86_64.gz"
+      sha256 "740c6f183321d362efe63cac932061a3297f0c2266c8642c3ac955785c636bdc"
     end
   end
 
