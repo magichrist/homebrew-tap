@@ -1,4 +1,4 @@
-alias g:=generate
-#Generate rb file
-generate:
-    python release_getter.py && git add . && git commit -m "new version" && git push
+alias a:=all
+#Generate rb file and add and commit and push
+all:
+    python release_getter.py

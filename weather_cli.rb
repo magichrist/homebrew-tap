@@ -2,6 +2,7 @@
 class WeatherCli < Formula
   desc "Fast CLI tool to fetch and display weather information"
   homepage "https://github.com/magichrist/weather_cli"
+  version "v0.3.0"
   license "MIT"
 
   on_macos do

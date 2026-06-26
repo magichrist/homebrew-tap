@@ -18,7 +18,7 @@ result = subprocess.run(
 )
 
 json_data = json.loads(result.stdout)["assets"]
-
+version=json_data[0]['url'].split("download/")[1].split("/")[0]
 for i in range(len(json_data)):
     name = json_data[i]["name"].split("-")
     url = json_data[i]["url"]
@@ -40,6 +40,7 @@ formula = f"""
 class WeatherCli < Formula
   desc "Fast CLI tool to fetch and display weather information"
   homepage "https://github.com/magichrist/weather_cli"
+  version "{version}"
   license "MIT"
 
   on_macos do
@@ -67,4 +68,4 @@ end
 """
 
 os.system(f"echo '{formula}' > ./weather_cli.rb")
-
+os.system(f"git add . && git commit -m '{version}' && git push")
