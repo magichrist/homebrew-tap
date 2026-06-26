@@ -67,3 +67,4 @@ end
 """
 
 os.system(f"echo '{formula}' > ./weather_cli.rb")
+
